@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <!---Section 1 ------->
+<nav>
+    <div class="logo">MTGL</div>
+    <div class="nav-items">
+        <a href="/">Overview</a>
+        <a href="/">Explore Our Products</a>
+        <a href="/">Contact</a>
+    </div>
+</nav>
+<!---Section 2-------->
+
+ <section class="hero">
+    <div class="hero-Container">
+        <div class="column-left"><br>
+                    <h1>Pursue Financial Stability</h1><br>                    
+                   <p>
+                    At vero eos et accusamus et iusto odio dignissimos
+                    ducimus<br> 
+                    qui blanditiis praesentium voluptatum deleniti atque 
+                    corrupti<br>
+                    quos dolores et quas molestias excepturi sint
+                    occaecati cupiditate<br>
+                    non provident, similique sunt in culpa qui officia 
+                    deserunt mollitia <br>
+                    animi, id est laborum et dolorum fuga. Et harum 
+                    quidem rerum facilis <br>
+                    est et expedita distinctio.<br>
+
+                    <p>Nam libero tempore, cum soluta nobis est eligendi 
+                          optio cumque nihil<br>
+                         impedit quo minus id quod maxime placeat facere
+                          possimus, omnis <br>
+                         voluptas assumenda est, omnis dolor repellendus.
+                          Temporibus autembu."</p><br>
+                   </p>
+                   <div class="Explore MTG">
+                    <button onclick="myFunction()" class="dropbtn">Explore MTG</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                      <a href="#about">About</a>
+                      <a href="#base">Base</a>
+                      <a href="#blog">Blog</a>
+                      <a href="#contact">Contact</a>
+                      <a href="#custom">Custom</a>
+                      <a href="#support">Support</a>
+                      <a href="#tools">Tools</a>
+                                       
+                     <script>
+                        /* When the user clicks on the button,
+                        toggle between hiding and showing the Explore MTG content */
+                        function myFunction() {
+                          document.getElementById("myDropdown").classList.toggle("show");
+                        }
+                        
+                        function filterFunction() {
+                          const input = document.getElementById("myInput");
+                          const filter = input.value.toUpperCase();
+                          const div = document.getElementById("myDropdown");
+                          const a = div.getElementsByTagName("a");
+                          for (let i = 0; i < a.length; i++) {
+                            txtValue = a[i].textContent || a[i].innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                              a[i].style.display = "";
+                            } else {
+                              a[i].style.display = "none";
+                            }
+                          }
+                        }
+                        </script>
+            </div>
+                </div>    
+                   
+        </div>
+    </div> 
+     
+    <!---Section 3 ------->
+    <style>
+        p {
+          background-image: url('img_girl.jpg');
+        }
+        </style>
+    <!---Section 4-------->
+</section>
+
+<footer>
+  <p>email us</p>
+</footer>
+    
+</body>
+</html>
